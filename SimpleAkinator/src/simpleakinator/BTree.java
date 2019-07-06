@@ -2,7 +2,8 @@ package simpleakinator;
 
 import java.io.Serializable;
 
-/** A classe BTree é uma arvore de grau 2 que contem elementos e perguntas que, ao caminhar pela arvore, levam aos elementos;
+/** 
+ * A classe BTree é uma arvore de grau 2 que contem elementos e perguntas que, ao caminhar pela arvore, levam aos elementos;
  * Sempre antes de chegar a um elemento, há um Node com uma pergunta chave (é o elemento?), exemplo:
  *      é uma pessoa? -(sim)-> é o de lucca? -(sim)-> Node contendo o de lucca
  * Isso permite um comportamento como: 
@@ -22,7 +23,7 @@ public class BTree implements Serializable{
     
 //  Insere um novo elemento a partir de um ponto de inserção, com um Node contendo sua caracteristica, outro contendo sua pergunta chave (é elemento?), e outro contendo o elemento em si
     public void inserir(Node pontoDeInsersao, Node caracteristica, Node conteudo){
-        Node aux = new Node("pergunta", "É 0(a)/um(a) " + conteudo.getConteudo() + "?", conteudo, null);
+        Node aux = new Node("pergunta", "É o(a)/um(a) " + conteudo.getConteudo() + "?", conteudo, null);
         caracteristica.setDir(aux);
         pontoDeInsersao.setEsq(caracteristica);
     }

@@ -3,8 +3,9 @@ package simpleakinator;
 import java.io.Serializable;
 
 /**
- *
- * @author lucas
+ * Classe Node são os nós e folhas da árvore binária, elas possuem tipo (que pode ser pergunta (galho) ou elemento (folha)) 
+ * e conteudo, que pode ser o elemento ou a pergunta, além dos Nodes esquerda e direita.
+ * 
  */
 public class Node implements Serializable{
     private String type;

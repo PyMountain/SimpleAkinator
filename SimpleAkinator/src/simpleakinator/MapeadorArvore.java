@@ -9,6 +9,13 @@ import java.io.ObjectOutputStream;
 import java.util.Collection;
 import java.util.HashMap;
 
+/**
+ * Classe MapeadorArvore é o serializador da aplicação, ele salva a árvore BTree como um arquivo binário
+ * com a extensão .Nozes, utilizando o nome arvre.nozes, esse arquivo será alocado na raiz da aplicação;
+ * Apesar da cacheArvore ser um HashMap, a aplicação só salva um unico elemento, foi utilizado HashMap por conta da
+ * lógica da leitura dos arquivos binários.
+ */
+
 public class MapeadorArvore {
     private HashMap<String, BTree> cacheArvore = new HashMap<>();
     private final String filename = "arvre.nozes";

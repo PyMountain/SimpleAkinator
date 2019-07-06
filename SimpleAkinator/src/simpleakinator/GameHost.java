@@ -1,7 +1,10 @@
 package simpleakinator;
 
 import java.util.Scanner;
-
+/**
+ * Classe GameHost é o jogo em sim, aqui fica o "controlador" e a "view" da aplicação, ele conduz o jogo e 
+ * interage com o usuário de maneira robusta e descontraída.
+ */
 public class GameHost {
     
     private MapeadorArvore mapArv;
@@ -91,7 +94,7 @@ public class GameHost {
             System.out.print("> ");
             processarPergunta(usuario.nextLine().toLowerCase(), nodeAtual);
         } else if(nodeAtual.getType().equals("elemento")) {
-            System.out.println("ACERTEI! quer jogar denovo?");
+            System.out.println("ACERTEI! era "+ nodeAtual.getConteudo() +", quer jogar denovo?");
             System.out.print("> ");
             processarPerguntaFinal(usuario.nextLine().toLowerCase());
         }
